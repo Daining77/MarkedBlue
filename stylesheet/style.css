@@ -1,0 +1,9 @@
+h1 {
+    font-family: "Inconsolata", monospace;
+    font-size: large;
+}
+
+.processImage {
+    width: 80%;
+    height: auto;
+}
