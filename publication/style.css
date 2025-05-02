@@ -29,6 +29,11 @@ body {
     font-size: 16px;
 }
 
+.logo img {
+    height: 40px; 
+    width: auto;
+}
+
 .content {
     width: 100%;
     display: flex;
@@ -36,9 +41,16 @@ body {
     padding: 100px 0;
 }
 
-.logo img {
-    height: 40px; 
-    width: auto;
+#card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#card:hover {
+    cursor: none;
 }
 
 .publishedImage {
@@ -48,6 +60,50 @@ body {
     position: relative;
     z-index: 1;
 }
+
+#transcardImage {
+    position: absolute;
+    display: none;
+    pointer-events: none; 
+    z-index: 10; 
+    width: 80%;
+    height: auto;
+    opacity: 0.8; 
+}
+
+.card-meta {
+    width: 64%;
+    margin: 60px auto 0 auto;
+    color: #333;
+    font-family: 'Courier', monospace;
+  }
+  
+  .card-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  .card-description {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .left-block, .right-block {
+    flex: 1 1 300px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .left-block p {
+    margin-bottom: 20px;
+  }
+  
+  .right-block p {
+    margin-bottom: 20px;
+  }
 
 .footer {
     width: 100%;
