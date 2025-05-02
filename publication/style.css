@@ -1,4 +1,9 @@
-h1 .title {
+.title {
     font-family: "Courier Prime", monospace;
-    font-size: large;
+    font-size: small;
+    font-weight: bold;
 }
+
+.processImage {
+    cursor: url("../publication/20250214/images/Feb14_Trans.png"), auto;
+  }
