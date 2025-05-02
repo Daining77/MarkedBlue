@@ -38,7 +38,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 #card {
@@ -54,7 +54,7 @@ body {
 }
 
 .publishedImage {
-    width: 80%;
+    width: 50%;
     height: auto;
     display: block;
     position: relative;
@@ -66,14 +66,14 @@ body {
     display: none;
     pointer-events: none; 
     z-index: 10; 
-    width: 80%;
+    width: 50%;
     height: auto;
     opacity: 0.8; 
 }
 
 .card-meta {
-    width: 64%;
-    margin: 60px auto 0 auto;
+    width: 40%;
+    margin: 20px auto 0 auto;
     color: #333;
     font-family: 'Courier', monospace;
   }
