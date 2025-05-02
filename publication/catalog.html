@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marked Blue</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inconsolata', serif;
+      background: #fbfbfb;
+      margin: 0;
+      padding: 40px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      justify-content: center;
+    }
+    .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 20px 0;
+      max-width: 90vw;
+      scrollbar-width: none;
+    }
+    .scroll-container::-webkit-scrollbar {
+      display: none;
+    }
+    .card {
+      flex: 0 0 260px;
+      aspect-ratio: 4 / 3;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: -6px -6px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .caption {
+      text-align: center;
+      max-width: 80%;
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-container" id="scroll-container">
+    <div class="card"><img src="images/FEB14.jpg" alt="FEB14" /></div>
+    <div class="card"><img src="images/FEB15.jpg" alt="FEB15" /></div>
+    <div class="card"><img src="images/FEB16.jpg" alt="FEB16" /></div>
+    <div class="card"><img src="images/FEB17.jpg" alt="FEB17" /></div>
+    <div class="card"><img src="images/FEB18.jpg" alt="FEB18" /></div>
+    <div class="card"><img src="images/FEB19.jpg" alt="FEB19" /></div>
+    <div class="card"><img src="images/FEB20.jpg" alt="FEB20" /></div>
+    <div class="card"><img src="images/FEB21.jpg" alt="FEB21" /></div>
+    <div class="card"><img src="images/MAR14.jpg" alt="MAR14" /></div>
+    <div class="card"><img src="images/MAR15.jpg" alt="MAR15" /></div>
+    <div class="card"><img src="images/MAR16.jpg" alt="MAR16" /></div>
+    <div class="card"><img src="images/MAR17.jpg" alt="MAR17" /></div>
+    <div class="card"><img src="images/MAR18.jpg" alt="MAR18" /></div>
+    <div class="card"><img src="images/MAR19.jpg" alt="MAR19" /></div>
+    <div class="card"><img src="images/MAR20.jpg" alt="MAR20" /></div>
+    <div class="card"><img src="images/MAR21.jpg" alt="MAR21" /></div>
+    <div class="card"><img src="images/APR14.jpg" alt="APR14" /></div>
+    <div class="card"><img src="images/APR15.jpg" alt="APR15" /></div>
+    <div class="card"><img src="images/APR16.jpg" alt="APR16" /></div>
+    <div class="card"><img src="images/APR17.jpg" alt="APR17" /></div>
+    <div class="card"><img src="images/APR18.jpg" alt="APR18" /></div>
+    <div class="card"><img src="images/APR19.jpg" alt="APR19" /></div>
+    <div class="card"><img src="images/APR20.jpg" alt="APR20" /></div>
+    <div class="card"><img src="images/APR21.jpg" alt="APR21" /></div>
+  </div>
+  <div class="caption">In cloudy weather, the image appears bluish-gray, while the blue produced on sunny days is more vivid.</div>
+  <script>
+    
+const container = document.getElementById('scroll-container');
+const originalCards = Array.from(container.children);
+originalCards.forEach(card => {
+  const clone = card.cloneNode(true);
+  container.appendChild(clone);
+});
+container.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  const scrollAmount = e.deltaX !== 0 ? e.deltaX : e.deltaY;
+  container.scrollLeft += scrollAmount;
+}, { passive: false });
+container.addEventListener('scroll', () => {
+  const scrollWidth = container.scrollWidth / 2;
+  if (container.scrollLeft >= scrollWidth) {
+    container.scrollLeft -= scrollWidth;
+  }
+});
+
+  </script>
+</body>
+</html>
