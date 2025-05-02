@@ -1,9 +1,57 @@
-.title {
-    font-family: "Courier Prime", monospace;
-    font-size: small;
-    font-weight: bold;
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Inconsolata', monospace; 
+    overflow-x: hidden;
 }
 
-.processImage {
-    cursor: url("../publication/20250214/images/Feb14_Trans.png"), auto;
-  }
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    background-color: #f8f8f8; /* test background color */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.logo img {
+    height: 40px; 
+    width: auto;
+}
+
+.publishedImage {
+    width: 80%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* test background color */
+}
